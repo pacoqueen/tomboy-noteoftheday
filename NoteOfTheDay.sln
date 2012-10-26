@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteOfTheDay", "NoteOfTheDay.csproj", "{33026B26-C907-4DBB-A438-85F042578AEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Mac|Any CPU = Mac|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33026B26-C907-4DBB-A438-85F042578AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33026B26-C907-4DBB-A438-85F042578AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33026B26-C907-4DBB-A438-85F042578AEA}.Mac|Any CPU.ActiveCfg = Mac|Any CPU
+		{33026B26-C907-4DBB-A438-85F042578AEA}.Mac|Any CPU.Build.0 = Mac|Any CPU
+		{33026B26-C907-4DBB-A438-85F042578AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33026B26-C907-4DBB-A438-85F042578AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = NoteOfTheDay.csproj
+	EndGlobalSection
+EndGlobal

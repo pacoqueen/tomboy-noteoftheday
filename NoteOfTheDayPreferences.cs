@@ -7,6 +7,7 @@ namespace Tomboy.NoteOfTheDay
 	public class NoteOfTheDayPreferences : Gtk.VBox
 	{
 		Gtk.Button open_template_button;
+        Gtk.CheckButton use_yesterday_check;
 
 		public NoteOfTheDayPreferences ()
 : base (false, 12)
@@ -20,6 +21,12 @@ namespace Tomboy.NoteOfTheDay
 			label.Show ();
 			PackStart (label, true, true, 0);
 
+            use_yesterday_check = new Gtk.CheckButton(
+                Catalog.GetString("_Use yesterday note as template."));
+            use_yesterday_check.UseUnderline = true;
+            use_yesterdat_check.Show();
+            PackStart (use_yesterday_check, false, false, 0);
+            
 			open_template_button = new Gtk.Button (
 			        Catalog.GetString ("_Open Today: Template"));
 			open_template_button.UseUnderline = true;

@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="NoteOfTheDay.cs">
+    <Files>
+      <File FileName="NoteOfTheDay.cs" Line="14" Column="38" />
+      <File FileName="NoteOfTheDayPreferences.cs" Line="29" Column="12" />
+      <File FileName="NoteOfTheDay.addin.xml" Line="5" Column="101" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

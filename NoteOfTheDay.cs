@@ -21,12 +21,21 @@ namespace Tomboy.NoteOfTheDay
 		{
 			string title = GetTitle (day);
 
-			// Attempt to load content from template
-			Note templateNote = manager.Find (TemplateTitle);
-			if (templateNote != null)
-				return templateNote.XmlContent.Replace (TemplateTitle, title);
-			else
-				return GetTemplateContent (title);
+            Note templateNote = manager.Find (TemplateTitle);
+
+            // Attempt to load yesterday "NoteOfTheDay" note. If not, then template.
+            // And if not again, then default.
+            // First of all... Do you want to start with yesterday note?
+            // TODO: Let number of days to look back for be configurable.
+            if (false) {
+                ; // TODO: PORASQUI
+            } else {
+			    // Attempt to load content from template
+			    if (templateNote != null)
+    				return templateNote.XmlContent.Replace (TemplateTitle, title);
+			    else
+    				return GetTemplateContent (title);
+            }
 		}
 
 		public static string GetTemplateContent (string title)
