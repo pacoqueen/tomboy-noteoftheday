@@ -27,6 +27,17 @@ namespace Tomboy.NoteOfTheDay
             use_yesterdat_check.Show();
             PackStart (use_yesterday_check, false, false, 0);
             
+            // Check if preference has been set before
+            if (Preferences.Get(NoteOfTheDay.NOTD_YESTERDAY) == null){
+                // Default value
+                use_yesterday_check.Active = true;
+            }else if ((bool) Preferences.Get(NoteOfTheDay.NOTD_YESTERDAY)){
+                use_yesterday_check.Active = true;
+            }else{
+                use_yesterday_check.Active = false;
+            }
+            use_yesterday_check.Toggled += OnYesterdayCheckToggled;
+            
 			open_template_button = new Gtk.Button (
 			        Catalog.GetString ("_Open Today: Template"));
 			open_template_button.UseUnderline = true;
@@ -36,6 +47,16 @@ namespace Tomboy.NoteOfTheDay
 
 			ShowAll ();
 		}
+  
+        private void OnYesterdayCheckToggled(object sender, EventArgs args){
+            if (use_yesterday_check.Active) {
+                Preferences.Set(NoteOfTheDay.NOTD_YESTERDAY, true);
+                Logger.Debug("NoteOfTheDay: turning yesterday as template on.");
+            }else{
+                Preferences.Set(NoteOfTheDay.NOTD_YESTERDAY, false);
+                Logger.Debug("NoteOfTheDay: turning yesterday as template off.");
+            }
+        }
 
 		void OpenTemplateButtonClicked (object sender, EventArgs args)
 		{

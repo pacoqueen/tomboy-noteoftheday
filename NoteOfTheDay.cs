@@ -1,16 +1,19 @@
 using System;
 using System.Collections.Generic;
-using Tomboy;
 using Mono.Unix;
+using Tomboy;
 
 namespace Tomboy.NoteOfTheDay
 {
-	public class NoteOfTheDay
+	public class NoteOfTheDay 
 	{
+ 
+        public const string NOTD_YESTERDAY = "/apps/tomboy/noteoftheday/yesterday";
+        
 		public static string TemplateTitle = Catalog.GetString ("Today: Template");
 
 		static string title_prefix = Catalog.GetString ("Today: ");
-
+  
 		public static string GetTitle (DateTime day)
 		{
 			// Format: "Today: Friday, July 01 2005"
@@ -20,14 +23,29 @@ namespace Tomboy.NoteOfTheDay
 		public static string GetContent (DateTime day, NoteManager manager)
 		{
 			string title = GetTitle (day);
+            
+            bool yesterdayAsTemplate;
 
             Note templateNote = manager.Find (TemplateTitle);
 
             // Attempt to load yesterday "NoteOfTheDay" note. If not, then template.
             // And if not again, then default.
             // First of all... Do you want to start with yesterday note?
-            // TODO: Let number of days to look back for be configurable.
-            if (false) {
+            try{
+                yesterdayAsTemplate = (bool) Preferences.Get(NoteOfTheDay.NOTD_YESTERDAY);
+            }catch (Exception) {
+                Logger.Debug("NoteOfTheDay: Couldn't find a preference for yesterday as template.");
+                yesterdayAsTemplate = true; // Defaults to true. See NoteOfTheDayPreferences.cs
+            }
+            // TODO: Let number of days to look back for to be configurable.
+            if (yesterdayAsTemplate) {
+                /*
+                 * Ok. Let me see... 
+                 * First of all: find yesterday note calculating yesterday date as today minus 24 h.
+                 * There is a method for searching by date.
+                 * Then, replace yesterday date for today date.
+                 * And finally return note content.
+                 */
                 ; // TODO: PORASQUI
             } else {
 			    // Attempt to load content from template
