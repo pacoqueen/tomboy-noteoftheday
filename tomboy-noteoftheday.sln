@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteOfTheDay", "NoteOfTheDay.csproj", "{33026B26-C907-4DBB-A438-85F042578AEA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tomboy-noteoftheday", "tomboy-noteoftheday.csproj", "{33026B26-C907-4DBB-A438-85F042578AEA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4BDD2606-6B74-4E8F-8240-86F18934CEC7}"
 	ProjectSection(SolutionItems) = preProject
@@ -25,6 +25,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = NoteOfTheDay.csproj
+		StartupItem = tomboy-noteoftheday.csproj
 	EndGlobalSection
 EndGlobal
