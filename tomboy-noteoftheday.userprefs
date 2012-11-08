@@ -2,6 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="NoteOfTheDay.cs">
     <Files>
+      <File FileName="compile.sh" Line="10" Column="63" />
       <File FileName="NoteOfTheDay.cs" Line="64" Column="36" />
       <File FileName="NoteOfTheDayPreferences.cs" Line="66" Column="4" />
       <File FileName="NoteOfTheDayApplicationAddin.cs" Line="29" Column="13" />
